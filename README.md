@@ -6,9 +6,9 @@ The goal for this project is to understand how to build and deploy a full stack 
 * Install [oc](https://www.okd.io/)
 * Install [kompose](https://kompose.io)
 * Start minishift
-..* `minishift start`
+  * `minishift start`
 * Login to minishift and create a new project
-..* `oc login`
-..* `oc new-project os-js-fullstack`
+  * `oc login`
+  * `oc new-project os-js-fullstack`
 * Deploy on minishift
-..* `kompose up`
+  * `kompose up`
