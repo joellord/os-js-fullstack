@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <title>OpenShift JavaScript FullStack deploy</title>
+  </head>
+
+  <body>
+    <h1>Demo app</h1>
+    
+    <button id="fetchBtn">Fetch</button>
+
+    <p id="result"></p>
+  </body>
+
+  <script type="text/javascript">
+  
+  const API_URL = location.origin.replace("front-", "api-");
+  
+  const fetchData = () => {
+    fetch(`${API_URL}/api/visits`)
+      .then(resp => resp.json())
+      .then(data => {
+        document.querySelector("#result").innerText = data.message;
+      })
+      .catch(err => {
+        document.querySelector("#result").innerText = "An error occurred";
+      });
+  }
+
+  document.querySelector("#fetchBtn").addEventListener("click", fetchData);
+
+  </script>
+</html>
