@@ -1,15 +1,14 @@
-= OpenShift JavaScript FullStack deploy
-The goal for this project is to understand how to build and deploy a full stack javascript application.
+# OpenShift JavaScript FullStack deploy
+The goal for this project is to understand how to build and deploy a full stack javascript application on OpenShift using docker-compose and kompose.
 
-== Structure
-/front
-
-Will contain a static website served by nginx. Stretch goal will be to have a React application that is build at some point in the process
-
-/api
-
-An API that will serve data from a database
-
-/db
-
-Will contain the build instructions for the DB (and the volume?)
+## Instructions
+* Install [minishift](https://www.okd.io/minishift/)
+* Install [oc](https://www.okd.io/)
+* Install [kompose](https://kompose.io)
+* Start minishift
+..* `minishift start`
+* Login to minishift and create a new project
+..* `oc login`
+..* `oc new-project os-js-fullstack`
+* Deploy on minishift
+..* `kompose up`
