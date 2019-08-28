@@ -12,3 +12,6 @@ The goal for this project is to understand how to build and deploy a full stack 
   * `oc new-project os-js-fullstack`
 * Deploy on minishift
   * `kompose up`
+* Expose routes for front end and API
+  * `oc expose service front --port=8080`
+  * `oc expose service api --port=8080`
